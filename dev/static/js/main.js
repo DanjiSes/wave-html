@@ -23,8 +23,8 @@ const swiper = new Swiper(".offer__list", {
 $('input[name="daterange"]').on("apply.daterangepicker", function (ev, picker) {
   $(this).val(
     picker.startDate.format("DD.MM.YYYY") +
-      " - " +
-      picker.endDate.format("DD.MM.YYYY")
+    " - " +
+    picker.endDate.format("DD.MM.YYYY")
   );
 });
 
@@ -225,3 +225,15 @@ if (window.innerWidth <= 767) {
 
   $(".testimonials__swiper-wrapper").empty().append(slides);
 }
+
+const swiper3 = new Swiper('.img-swiper', {
+  speed: 400,
+  loop: true,
+  navigation: {
+    nextEl: ".img__next-btn",
+    prevEl: ".img__prev-btn",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
